@@ -6,13 +6,13 @@ using System.Threading.Tasks;
 
 namespace MMTSD
 {
-    enum QuestionCategory
+    public enum QuestionCategory
     {
         Easy, 
         Basic,
         Complicated
     }
-    sealed class Question
+    public sealed class Question
     {
         public QuestionCategory Category { get; }
         public Answer[] Answers { get; }
@@ -23,6 +23,11 @@ namespace MMTSD
             this.Category = Category;
             this.Answers = Answers;
             this.QuestionText = QuestionText;
+        }
+
+        public override string ToString()
+        {
+            return this.QuestionText;
         }
     }
 }

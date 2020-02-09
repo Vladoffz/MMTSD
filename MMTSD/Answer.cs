@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace MMTSD
 {
-    sealed class Answer
+    public sealed class Answer
     {
         public string Text { get; }
         public bool IsRight { get; }

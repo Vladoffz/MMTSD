@@ -6,3 +6,5 @@ C:\Users\CSharpSila\source\repos\MMTSD\MMTSD\obj\Debug\MMTSD.Properties.Resource
 C:\Users\CSharpSila\source\repos\MMTSD\MMTSD\obj\Debug\MMTSD.csproj.GenerateResource.cache
 C:\Users\CSharpSila\source\repos\MMTSD\MMTSD\obj\Debug\MMTSD.exe
 C:\Users\CSharpSila\source\repos\MMTSD\MMTSD\obj\Debug\MMTSD.pdb
+C:\Users\CSharpSila\source\repos\MMTSD\MMTSD\obj\Debug\MMTSD.MainForm.resources
+C:\Users\CSharpSila\source\repos\MMTSD\MMTSD\obj\Debug\MMTSD.QuestionForm.resources
