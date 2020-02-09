@@ -1,0 +1,8 @@
+C:\Users\CSharpSila\source\repos\MMTSD\MMTSD\bin\Debug\MMTSD.exe.config
+C:\Users\CSharpSila\source\repos\MMTSD\MMTSD\bin\Debug\MMTSD.exe
+C:\Users\CSharpSila\source\repos\MMTSD\MMTSD\bin\Debug\MMTSD.pdb
+C:\Users\CSharpSila\source\repos\MMTSD\MMTSD\obj\Debug\MMTSD.csprojAssemblyReference.cache
+C:\Users\CSharpSila\source\repos\MMTSD\MMTSD\obj\Debug\MMTSD.Properties.Resources.resources
+C:\Users\CSharpSila\source\repos\MMTSD\MMTSD\obj\Debug\MMTSD.csproj.GenerateResource.cache
+C:\Users\CSharpSila\source\repos\MMTSD\MMTSD\obj\Debug\MMTSD.exe
+C:\Users\CSharpSila\source\repos\MMTSD\MMTSD\obj\Debug\MMTSD.pdb
