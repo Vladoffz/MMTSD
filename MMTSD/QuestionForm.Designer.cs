@@ -45,7 +45,7 @@
             this.QuestionBox.Controls.Add(this.radioButton1);
             this.QuestionBox.Location = new System.Drawing.Point(57, 31);
             this.QuestionBox.Name = "QuestionBox";
-            this.QuestionBox.Size = new System.Drawing.Size(457, 245);
+            this.QuestionBox.Size = new System.Drawing.Size(491, 245);
             this.QuestionBox.TabIndex = 0;
             this.QuestionBox.TabStop = false;
             this.QuestionBox.Text = "groupBox1";
@@ -111,7 +111,11 @@
             this.ClientSize = new System.Drawing.Size(800, 343);
             this.Controls.Add(this.OkButton);
             this.Controls.Add(this.QuestionBox);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "QuestionForm";
+            this.ShowIcon = false;
             this.Text = "QuestionForm";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.QuestionForm_FormClosed);
             this.QuestionBox.ResumeLayout(false);

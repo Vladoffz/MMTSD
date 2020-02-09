@@ -14,15 +14,20 @@ namespace MMTSD
     {
         public Question question;
         public MainForm mainForm;
+        private Queue<Question> questions;
 
-        public QuestionForm(Question question, MainForm mainForm)
+        public QuestionForm(Queue<Question> questions, MainForm mainForm)
         {
             InitializeComponent();
-            this.question = question;
+
+            this.question = questions.Peek();
             this.mainForm = mainForm;
+            this.questions = questions;
+
             QuestionBox.Text = question.QuestionText;
             Answer[] arr = new Answer[question.Answers.Length];
             question.Answers.CopyTo(arr, 0);
+
             Random rng = new Random();
             int n = arr.Length;
             while (n > 1)
@@ -33,10 +38,11 @@ namespace MMTSD
                 arr[k] = arr[n];
                 arr[n] = value;
             }
-            radioButton1.Text = arr[0].Text;
-            radioButton2.Text = arr[1].Text;
-            radioButton3.Text = arr[2].Text;
-            radioButton4.Text = arr[3].Text;
+
+            for (int i = 0; i < arr.Length; i++)
+            {
+                ((RadioButton)QuestionBox.Controls[i]).Text = arr[i].Text;
+            }
 
         }
 
@@ -55,11 +61,18 @@ namespace MMTSD
                     {
                         if (((RadioButton) i).Text == j.Text)
                         {
-                            if (j.IsRight) MessageBox.Show("ok");
-                            else MessageBox.Show("NOT ok");
+                            MessageBox.Show(j.IsRight ? "ok" : "NOT ok");
                         }
                     }
                 }
+            }
+
+            if (this.questions.Count > 1)
+            {
+                questions.Dequeue();
+                var form = new QuestionForm(this.questions, this.mainForm);
+                form.Show();
+                this.Hide();
             }
         }
     }

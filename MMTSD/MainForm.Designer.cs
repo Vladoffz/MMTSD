@@ -36,15 +36,14 @@
             // 
             this.QuestionsListBox.FormattingEnabled = true;
             this.QuestionsListBox.ItemHeight = 16;
-            this.QuestionsListBox.Location = new System.Drawing.Point(65, 42);
+            this.QuestionsListBox.Location = new System.Drawing.Point(21, 39);
             this.QuestionsListBox.Name = "QuestionsListBox";
-            this.QuestionsListBox.Size = new System.Drawing.Size(433, 180);
+            this.QuestionsListBox.Size = new System.Drawing.Size(540, 212);
             this.QuestionsListBox.TabIndex = 0;
-            this.QuestionsListBox.SelectedIndexChanged += new System.EventHandler(this.QuestionsListBox_SelectedIndexChanged);
             // 
             // OkButton
             // 
-            this.OkButton.Location = new System.Drawing.Point(567, 56);
+            this.OkButton.Location = new System.Drawing.Point(599, 68);
             this.OkButton.Name = "OkButton";
             this.OkButton.Size = new System.Drawing.Size(169, 140);
             this.OkButton.TabIndex = 1;
@@ -59,9 +58,12 @@
             this.ClientSize = new System.Drawing.Size(800, 312);
             this.Controls.Add(this.OkButton);
             this.Controls.Add(this.QuestionsListBox);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "MainForm";
+            this.ShowIcon = false;
             this.Text = "MainForm";
-            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.MainForm_FormClosed);
             this.ResumeLayout(false);
 
         }

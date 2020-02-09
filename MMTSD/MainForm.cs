@@ -13,87 +13,50 @@ namespace MMTSD
     public partial class MainForm : Form
     {
         Testing testing = new Testing();
-        private Question easyQuestion;
-        private Question basicQuestion;
-        private Question complicatedQuestion;
-        private int count = 0;
+        private Queue<Question> questions = new Queue<Question>();
+        private Queue<QuestionCategory> categories;
+
         public MainForm()
         {
             InitializeComponent();
-            foreach (var question in testing.Questions)
+            categories = new Queue<QuestionCategory>();
+            foreach (var i in Enum.GetValues(typeof(QuestionCategory)))
             {
-                if (question.Category == QuestionCategory.Easy)
-                {
-                    QuestionsListBox.Items.Add(question.QuestionText);
-                }
+                categories.Enqueue((QuestionCategory) i);
+            }
+
+            var category = categories.Dequeue();
+            foreach (var c in testing.Questions)
+            {
+                if (c.Category == category) QuestionsListBox.Items.Add(c.QuestionText);
             }
         }
 
         private void OkButton_Click(object sender, EventArgs e)
         {
-            if (count == 0)
+            foreach (var question in testing.Questions)
             {
-                foreach (var question in testing.Questions)
+                if (QuestionsListBox.SelectedItem == question.QuestionText)
                 {
-                    if (QuestionsListBox.SelectedItem == question.QuestionText)
-                    {
-                        this.easyQuestion = question;
-                    }
+                    questions.Enqueue(question);
                 }
-                QuestionsListBox.Items.Clear();
-                foreach (var question in testing.Questions)
-                {
-                    if (question.Category == QuestionCategory.Basic)
-                    {
-                        QuestionsListBox.Items.Add(question.QuestionText);
+            }
 
-                    }
-                }
-                count++;
-            }
-            else if (count == 1)
+            if (categories.Count > 0)
             {
-                foreach (var question in testing.Questions)
-                {
-                    if (QuestionsListBox.SelectedItem == question.QuestionText)
-                    {
-                        this.basicQuestion = question;
-                    }
-                }
                 QuestionsListBox.Items.Clear();
-                foreach (var question in testing.Questions)
+                var category = categories.Dequeue();
+                foreach (var c in testing.Questions)
                 {
-                    if (question.Category == QuestionCategory.Complicated)
-                    {
-                        QuestionsListBox.Items.Add(question.QuestionText);
-                        complicatedQuestion = question;
-                    }
+                    if (c.Category == category) QuestionsListBox.Items.Add(c.QuestionText);
                 }
-                foreach (var question in testing.Questions)
-                {
-                    if (QuestionsListBox.SelectedItem == question.QuestionText)
-                    {
-                        this.complicatedQuestion = question;
-                    }
-                }
-                count++;
             }
-            else if (count > 1)
+            else
             {
-                QuestionForm form = new QuestionForm(this.easyQuestion, this);
+                QuestionForm form = new QuestionForm(questions, this);
                 form.Show();
                 this.Hide();
             }
-        }
-
-        private void MainForm_FormClosed(object sender, FormClosedEventArgs e)
-        {
-
-        }
-
-        private void QuestionsListBox_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
         }
     }
 }
