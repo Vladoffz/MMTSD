@@ -28,7 +28,15 @@ namespace MMTSD
             var category = categories.Dequeue();
             foreach (var c in testing.Questions)
             {
-                if (c.Category == category) QuestionsListBox.Items.Add(c.QuestionText);
+                if (c.Category == category)
+                {
+                    if (c.QuestionText.Length > 70)
+                    {
+                        QuestionsListBox.Items.Add(c.QuestionText.Substring(0, 70) + "...");
+                    }
+                    else 
+                        QuestionsListBox.Items.Add(c.QuestionText);
+                }
             }
         }
 
@@ -48,7 +56,15 @@ namespace MMTSD
                 var category = categories.Dequeue();
                 foreach (var c in testing.Questions)
                 {
-                    if (c.Category == category) QuestionsListBox.Items.Add(c.QuestionText);
+                    if (c.Category == category)
+                    {
+                        if (c.QuestionText.Length > 70)
+                        {
+                            QuestionsListBox.Items.Add(c.QuestionText.Substring(0, 70) + "...");
+                        }
+                        else
+                            QuestionsListBox.Items.Add(c.QuestionText);
+                    }
                 }
             }
             else
@@ -58,5 +74,6 @@ namespace MMTSD
                 this.Hide();
             }
         }
+
     }
 }

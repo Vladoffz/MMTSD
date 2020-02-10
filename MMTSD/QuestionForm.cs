@@ -61,7 +61,7 @@ namespace MMTSD
                     {
                         if (((RadioButton) i).Text == j.Text)
                         {
-                            MessageBox.Show(j.IsRight ? "ok" : "NOT ok");
+                            MessageBox.Show(j.IsRight ? "Правильно" : "Помилка");
                         }
                     }
                 }

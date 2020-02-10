@@ -29,11 +29,11 @@
         private void InitializeComponent()
         {
             this.QuestionBox = new System.Windows.Forms.GroupBox();
-            this.OkButton = new System.Windows.Forms.Button();
             this.radioButton4 = new System.Windows.Forms.RadioButton();
             this.radioButton3 = new System.Windows.Forms.RadioButton();
             this.radioButton2 = new System.Windows.Forms.RadioButton();
             this.radioButton1 = new System.Windows.Forms.RadioButton();
+            this.OkButton = new System.Windows.Forms.Button();
             this.QuestionBox.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -43,6 +43,7 @@
             this.QuestionBox.Controls.Add(this.radioButton3);
             this.QuestionBox.Controls.Add(this.radioButton2);
             this.QuestionBox.Controls.Add(this.radioButton1);
+            this.QuestionBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.QuestionBox.Location = new System.Drawing.Point(57, 31);
             this.QuestionBox.Name = "QuestionBox";
             this.QuestionBox.Size = new System.Drawing.Size(491, 245);
@@ -50,19 +51,10 @@
             this.QuestionBox.TabStop = false;
             this.QuestionBox.Text = "groupBox1";
             // 
-            // OkButton
-            // 
-            this.OkButton.Location = new System.Drawing.Point(591, 98);
-            this.OkButton.Name = "OkButton";
-            this.OkButton.Size = new System.Drawing.Size(139, 111);
-            this.OkButton.TabIndex = 1;
-            this.OkButton.Text = "OK";
-            this.OkButton.UseVisualStyleBackColor = true;
-            this.OkButton.Click += new System.EventHandler(this.OkButton_Click);
-            // 
             // radioButton4
             // 
             this.radioButton4.AutoSize = true;
+            this.radioButton4.Cursor = System.Windows.Forms.Cursors.Hand;
             this.radioButton4.Location = new System.Drawing.Point(25, 168);
             this.radioButton4.Name = "radioButton4";
             this.radioButton4.Size = new System.Drawing.Size(110, 21);
@@ -74,6 +66,7 @@
             // radioButton3
             // 
             this.radioButton3.AutoSize = true;
+            this.radioButton3.Cursor = System.Windows.Forms.Cursors.Hand;
             this.radioButton3.Location = new System.Drawing.Point(25, 128);
             this.radioButton3.Name = "radioButton3";
             this.radioButton3.Size = new System.Drawing.Size(110, 21);
@@ -85,6 +78,7 @@
             // radioButton2
             // 
             this.radioButton2.AutoSize = true;
+            this.radioButton2.Cursor = System.Windows.Forms.Cursors.Hand;
             this.radioButton2.Location = new System.Drawing.Point(25, 85);
             this.radioButton2.Name = "radioButton2";
             this.radioButton2.Size = new System.Drawing.Size(110, 21);
@@ -96,6 +90,7 @@
             // radioButton1
             // 
             this.radioButton1.AutoSize = true;
+            this.radioButton1.Cursor = System.Windows.Forms.Cursors.Hand;
             this.radioButton1.Location = new System.Drawing.Point(25, 43);
             this.radioButton1.Name = "radioButton1";
             this.radioButton1.Size = new System.Drawing.Size(110, 21);
@@ -104,10 +99,24 @@
             this.radioButton1.Text = "radioButton1";
             this.radioButton1.UseVisualStyleBackColor = true;
             // 
+            // OkButton
+            // 
+            this.OkButton.BackColor = System.Drawing.Color.Lavender;
+            this.OkButton.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.OkButton.Font = new System.Drawing.Font("MingLiU-ExtB", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.OkButton.Location = new System.Drawing.Point(591, 98);
+            this.OkButton.Name = "OkButton";
+            this.OkButton.Size = new System.Drawing.Size(157, 111);
+            this.OkButton.TabIndex = 1;
+            this.OkButton.Text = "ok";
+            this.OkButton.UseVisualStyleBackColor = false;
+            this.OkButton.Click += new System.EventHandler(this.OkButton_Click);
+            // 
             // QuestionForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.LightSteelBlue;
             this.ClientSize = new System.Drawing.Size(800, 343);
             this.Controls.Add(this.OkButton);
             this.Controls.Add(this.QuestionBox);
