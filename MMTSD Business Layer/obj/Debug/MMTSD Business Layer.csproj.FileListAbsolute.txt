@@ -1,0 +1,8 @@
+C:\Users\CSharpSila\source\repos\MMTSD\MMTSD Business Layer\bin\Debug\MMTSD Business Layer.dll
+C:\Users\CSharpSila\source\repos\MMTSD\MMTSD Business Layer\bin\Debug\MMTSD Business Layer.pdb
+C:\Users\CSharpSila\source\repos\MMTSD\MMTSD Business Layer\obj\Debug\MMTSD Business Layer.csprojAssemblyReference.cache
+C:\Users\CSharpSila\source\repos\MMTSD\MMTSD Business Layer\obj\Debug\MMTSD Business Layer.dll
+C:\Users\CSharpSila\source\repos\MMTSD\MMTSD Business Layer\obj\Debug\MMTSD Business Layer.pdb
+C:\Users\CSharpSila\source\repos\MMTSD\MMTSD Business Layer\bin\Debug\MMTSD Data Access Layer.dll
+C:\Users\CSharpSila\source\repos\MMTSD\MMTSD Business Layer\bin\Debug\MMTSD Data Access Layer.pdb
+C:\Users\CSharpSila\source\repos\MMTSD\MMTSD Business Layer\obj\Debug\MMTSD Business Layer.csproj.CopyComplete

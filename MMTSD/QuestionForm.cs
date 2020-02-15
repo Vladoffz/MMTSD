@@ -7,16 +7,18 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using MMTSD_Business_Layer;
 
 namespace MMTSD
 {
     public partial class QuestionForm : Form
     {
-        public Question question;
+        public string question;
         public MainForm mainForm;
-        private Queue<Question> questions;
+        private Queue<string> questions;
+        Testing testing = new Testing();
 
-        public QuestionForm(Queue<Question> questions, MainForm mainForm)
+        public QuestionForm(Queue<string> questions, MainForm mainForm)
         {
             InitializeComponent();
 
@@ -24,24 +26,24 @@ namespace MMTSD
             this.mainForm = mainForm;
             this.questions = questions;
 
-            QuestionBox.Text = question.QuestionText;
-            Answer[] arr = new Answer[question.Answers.Length];
-            question.Answers.CopyTo(arr, 0);
+            QuestionBox.Text = question;
+
+            var list = testing.getAnswers(question);
 
             Random rng = new Random();
-            int n = arr.Length;
+            int n = list.Count;
             while (n > 1)
             {
                 n--;
                 int k = rng.Next(n + 1);
-                Answer value = arr[k];
-                arr[k] = arr[n];
-                arr[n] = value;
+                string value = list[k];
+                list[k] = list[n];
+                list[n] = value;
             }
 
-            for (int i = 0; i < arr.Length; i++)
+            for (int i = 0; i < list.Count; i++)
             {
-                ((RadioButton)QuestionBox.Controls[i]).Text = arr[i].Text;
+                ((RadioButton)QuestionBox.Controls[i]).Text = list[i];
             }
 
         }
@@ -57,13 +59,7 @@ namespace MMTSD
             {
                 if (((RadioButton)i).Checked)
                 {
-                    foreach (var j in question.Answers)
-                    {
-                        if (((RadioButton) i).Text == j.Text)
-                        {
-                            MessageBox.Show(j.IsRight ? "Правильно" : "Помилка");
-                        }
-                    }
+                    MessageBox.Show(testing.checkAnswer(this.question, ((RadioButton)i).Text) ? "Правильно" : "Не правильно");
                 }
             }
 
@@ -75,5 +71,6 @@ namespace MMTSD
                 this.Hide();
             }
         }
+
     }
 }

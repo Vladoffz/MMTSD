@@ -7,73 +7,60 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using MMTSD_Business_Layer;
 
 namespace MMTSD
 {
     public partial class MainForm : Form
     {
         Testing testing = new Testing();
-        private Queue<Question> questions = new Queue<Question>();
-        private Queue<QuestionCategory> categories;
+        Queue<string> questionList = new Queue<string>();
+        private int count = 1;
 
         public MainForm()
         {
             InitializeComponent();
-            categories = new Queue<QuestionCategory>();
-            foreach (var i in Enum.GetValues(typeof(QuestionCategory)))
-            {
-                categories.Enqueue((QuestionCategory) i);
-            }
 
-            var category = categories.Dequeue();
-            foreach (var c in testing.Questions)
+            foreach (var c in testing.GetQuestions()[0])
             {
-                if (c.Category == category)
+                if (c.Length > 70)
                 {
-                    if (c.QuestionText.Length > 70)
-                    {
-                        QuestionsListBox.Items.Add(c.QuestionText.Substring(0, 70) + "...");
-                    }
-                    else 
-                        QuestionsListBox.Items.Add(c.QuestionText);
+                    QuestionsListBox.Items.Add(c.Substring(0, 70) + "...");
                 }
+                else
+                    QuestionsListBox.Items.Add(c);
             }
         }
 
         private void OkButton_Click(object sender, EventArgs e)
         {
-            foreach (var question in testing.Questions)
+            questionList.Enqueue((string)QuestionsListBox.SelectedItem);
+            if (count < testing.GetQuestions().Count)
             {
-                if (QuestionsListBox.SelectedItem == question.QuestionText)
-                {
-                    questions.Enqueue(question);
-                }
-            }
 
-            if (categories.Count > 0)
-            {
                 QuestionsListBox.Items.Clear();
-                var category = categories.Dequeue();
-                foreach (var c in testing.Questions)
+
+                foreach (var c in testing.GetQuestions()[count])
                 {
-                    if (c.Category == category)
+                    if (c.Length > 70)
                     {
-                        if (c.QuestionText.Length > 70)
-                        {
-                            QuestionsListBox.Items.Add(c.QuestionText.Substring(0, 70) + "...");
-                        }
-                        else
-                            QuestionsListBox.Items.Add(c.QuestionText);
+                        QuestionsListBox.Items.Add(c.Substring(0, 70) + "...");
                     }
+                    else
+                        QuestionsListBox.Items.Add(c);
                 }
+
+                count++;
             }
             else
             {
-                QuestionForm form = new QuestionForm(questions, this);
+                QuestionForm form = new QuestionForm(questionList, this);
                 form.Show();
                 this.Hide();
             }
+
         }
 
     }
 }
+

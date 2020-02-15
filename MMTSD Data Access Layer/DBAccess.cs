@@ -4,17 +4,24 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace MMTSD
+namespace MMTSD_Data_Access_Layer
 {
-    sealed class Testing
+    public class DBAccess    //here provided a database work simulation
     {
-        public List<Question> Questions = new List<Question>();
-
-        public Testing()
+        private string connetionString { get; }
+        public DBAccess(string connectionString)
         {
-            Questions.Add(new Question(QuestionCategory.Basic, 
+            this.connetionString = connectionString;
+
+        }
+
+        public List<Question> GetQA()
+        {
+            var Questions = new List<Question>();
+
+            Questions.Add(new Question(QuestionCategory.Basic,
                 new Answer[]
-                {new Answer("public", false), 
+                {new Answer("public", false),
                 new Answer("internal", true),
                 new Answer("private", false),
                 new Answer("protected internal", false)}, "Який рівень доступа мають класи, якщо модифікатор не вказаний?"));
@@ -66,6 +73,8 @@ namespace MMTSD
                     new Answer("Global Assembly Cache", true),
                     new Answer("Great Automatisation Company", false),
                     new Answer("Garbage After Collection", false)}, "Що таке GAC"));
+
+            return Questions;
         }
     }
 }
