@@ -13,7 +13,7 @@ namespace AppProject.Presenters
         List<Question> Questions { get; set; }
         List<QuestionCategory> Categories { get; set; }
         List<List<string>> GetQuestions();
-
+        List<string> QuestionsText { get; set; }
         List<string> GetAnswers(string quesetionString);
 
         bool CheckAnswer(string questionString, string anwerString);

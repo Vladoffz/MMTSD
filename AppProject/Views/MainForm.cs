@@ -7,7 +7,7 @@ namespace AppProject.Views
 {
     public partial class MainForm : Form, IViewMain
     {
-        public TestingPresenter presenter;
+        public IPresenter presenter;
         public string chosenQuestionText { get; set; }
         public List<string> questionsText { get; set; }
 
