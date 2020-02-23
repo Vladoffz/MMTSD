@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Configuration;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -8,13 +9,11 @@ namespace MMTSD_Data_Access_Layer
 {
     public class DBAccess    //here provided a database work simulation
     {
-        private string connetionString { get; }
-        public DBAccess(string connectionString)
+
+        public DBAccess()
         {
-            this.connetionString = connectionString;
-
+            string connectionString = ConfigurationManager.ConnectionStrings["DefaultConnection"].ConnectionString;
         }
-
         public List<Question> GetQA()
         {
             var Questions = new List<Question>();

@@ -1,0 +1,7 @@
+C:\Users\CSharpSila\source\repos\MMTSD\MMTSD Views\obj\Debug\MMTSD Views.csprojAssemblyReference.cache
+C:\Users\CSharpSila\source\repos\MMTSD\MMTSD Views\obj\Debug\MMTSD.MainForm.resources
+C:\Users\CSharpSila\source\repos\MMTSD\MMTSD Views\obj\Debug\MMTSD_Views.Properties.Resources.resources
+C:\Users\CSharpSila\source\repos\MMTSD\MMTSD Views\obj\Debug\MMTSD.QuestionForm.resources
+C:\Users\CSharpSila\source\repos\MMTSD\MMTSD Views\obj\Debug\MMTSD Views.csproj.GenerateResource.cache
+C:\Users\CSharpSila\source\repos\MMTSD\MMTSD Views\obj\Debug\MMTSD_Views.MainForm.resources
+C:\Users\CSharpSila\source\repos\MMTSD\MMTSD Views\obj\Debug\MMTSD_Views.QuestionForm.resources

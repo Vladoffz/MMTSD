@@ -1,4 +1,3 @@
-C:\Users\CSharpSila\source\repos\MMTSD\MMTSD\obj\Debug\MMTSD Presentation Layer.csprojAssemblyReference.cache
 C:\Users\CSharpSila\source\repos\MMTSD\MMTSD\obj\Debug\MMTSD.MainForm.resources
 C:\Users\CSharpSila\source\repos\MMTSD\MMTSD\obj\Debug\MMTSD.Properties.Resources.resources
 C:\Users\CSharpSila\source\repos\MMTSD\MMTSD\obj\Debug\MMTSD.QuestionForm.resources
@@ -12,4 +11,5 @@ C:\Users\CSharpSila\source\repos\MMTSD\MMTSD\bin\Debug\MMTSD Business Layer.dll
 C:\Users\CSharpSila\source\repos\MMTSD\MMTSD\bin\Debug\MMTSD Data Access Layer.dll
 C:\Users\CSharpSila\source\repos\MMTSD\MMTSD\bin\Debug\MMTSD Business Layer.pdb
 C:\Users\CSharpSila\source\repos\MMTSD\MMTSD\bin\Debug\MMTSD Data Access Layer.pdb
+C:\Users\CSharpSila\source\repos\MMTSD\MMTSD\obj\Debug\MMTSD Presentation Layer.csprojAssemblyReference.cache
 C:\Users\CSharpSila\source\repos\MMTSD\MMTSD\obj\Debug\MMTSD Presentation Layer.csproj.CopyComplete

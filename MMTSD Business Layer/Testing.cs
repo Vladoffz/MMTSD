@@ -14,7 +14,7 @@ namespace MMTSD_Business_Layer
 
         public Testing()
         {
-            var dbAccess = new DBAccess("");
+            var dbAccess = new DBAccess();
             Questions = dbAccess.GetQA();
 
             foreach (var i in Enum.GetValues(typeof(QuestionCategory)))
@@ -22,9 +22,6 @@ namespace MMTSD_Business_Layer
                 Categories.Add((QuestionCategory)i);
             }
         }
-
-        public Testing(string connectionString)
-        { }
 
         public List<List<string>> GetQuestions()
         {
