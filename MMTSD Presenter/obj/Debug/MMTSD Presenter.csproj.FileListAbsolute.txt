@@ -1,4 +1,0 @@
-C:\Users\CSharpSila\source\repos\MMTSD\MMTSD Presenter\bin\Debug\MMTSD Presenter.dll
-C:\Users\CSharpSila\source\repos\MMTSD\MMTSD Presenter\bin\Debug\MMTSD Presenter.pdb
-C:\Users\CSharpSila\source\repos\MMTSD\MMTSD Presenter\obj\Debug\MMTSD Presenter.dll
-C:\Users\CSharpSila\source\repos\MMTSD\MMTSD Presenter\obj\Debug\MMTSD Presenter.pdb

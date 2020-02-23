@@ -1,5 +1,0 @@
-C:\Users\CSharpSila\source\repos\MMTSD\MMTSD Data Access Layer\bin\Debug\MMTSD Data Access Layer.dll
-C:\Users\CSharpSila\source\repos\MMTSD\MMTSD Data Access Layer\bin\Debug\MMTSD Data Access Layer.pdb
-C:\Users\CSharpSila\source\repos\MMTSD\MMTSD Data Access Layer\obj\Debug\MMTSD Data Access Layer.dll
-C:\Users\CSharpSila\source\repos\MMTSD\MMTSD Data Access Layer\obj\Debug\MMTSD Data Access Layer.pdb
-C:\Users\CSharpSila\source\repos\MMTSD\MMTSD Data Access Layer\obj\Debug\MMTSD Data Access Layer.csprojAssemblyReference.cache
