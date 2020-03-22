@@ -5,6 +5,8 @@ VisualStudioVersion = 16.0.29519.87
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AppProject", "AppProject\AppProject.csproj", "{A77E29A0-C510-42B3-8044-3295B0253049}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WpfAppMMTSD", "WpfAppMMTSD\WpfAppMMTSD.csproj", "{7E9AA377-484D-44C8-AC26-AF130BEF8D05}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{A77E29A0-C510-42B3-8044-3295B0253049}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A77E29A0-C510-42B3-8044-3295B0253049}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A77E29A0-C510-42B3-8044-3295B0253049}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7E9AA377-484D-44C8-AC26-AF130BEF8D05}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7E9AA377-484D-44C8-AC26-AF130BEF8D05}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7E9AA377-484D-44C8-AC26-AF130BEF8D05}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7E9AA377-484D-44C8-AC26-AF130BEF8D05}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
