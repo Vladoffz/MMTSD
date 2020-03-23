@@ -1,0 +1,53 @@
+﻿<Window x:Class="WpfAppMMTSD.View.AdminPanelWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfAppMMTSD.View"
+        mc:Ignorable="d"
+        Title="AdminPanelWindow" Height="450" Width="800" WindowStartupLocation="CenterOwner">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition></RowDefinition>
+            <RowDefinition Height="20"></RowDefinition>
+        </Grid.RowDefinitions>
+        <TextBlock Grid.Column="0" Grid.Row="1" Text="© Andrey Rodik IT-83 2020" 
+                   TextAlignment="Right" Padding="0 0 20 0" Background="DarkGray"/>
+        <Grid Grid.Row="0">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+            <ListBox Grid.Column="0" ItemsSource="{Binding listQuestions, UpdateSourceTrigger=PropertyChanged}">
+                <ListBox.ItemTemplate>
+                    <DataTemplate>
+                        <StackPanel>
+                            <TextBlock FontSize="20" TextWrapping="Wrap" Text="{Binding QuestionText, UpdateSourceTrigger=PropertyChanged}"/>
+                            <TextBlock FontSize="18" Text="{Binding Category, UpdateSourceTrigger=PropertyChanged}"/>
+                            <ListBox ItemsSource="{Binding Answers, UpdateSourceTrigger=PropertyChanged}">
+                                <ListBox.ItemTemplate>
+                                    <DataTemplate>
+                                        <TextBlock x:Name="answerListBoxItem" Text="{Binding Text, UpdateSourceTrigger=PropertyChanged}"/>
+                                    </DataTemplate>
+                                </ListBox.ItemTemplate>
+                            </ListBox>
+                        </StackPanel>
+                    </DataTemplate>
+                </ListBox.ItemTemplate>
+
+            </ListBox>
+            <StackPanel Grid.Column="1" HorizontalAlignment="Center" Margin="5">
+                <TextBox x:Name = "QuestionTextBox" Height="30" Width="300" HorizontalAlignment="Left" Margin="10" Text="Question" FontSize="18" Foreground="Gray"/>
+                <StackPanel Orientation="Horizontal"><TextBox x:Name="Answer1TextBox" Height="30" Width="300" HorizontalAlignment="Left" Margin="10" Text="Answer 1" FontSize="18" Foreground="Gray"/><RadioButton x:Name="Answer1RadioButton" VerticalAlignment="Center" GroupName="Answers"/></StackPanel>
+                <StackPanel Orientation="Horizontal"><TextBox x:Name="Answer2TextBox" Height="30" Width="300" HorizontalAlignment="Left" Margin="10" Text="Answer 2" FontSize="18" Foreground="Gray"/><RadioButton x:Name="Answer2RadioButton" VerticalAlignment="Center" GroupName="Answers"/></StackPanel>
+                <StackPanel Orientation="Horizontal"><TextBox x:Name="Answer3TextBox" Height="30" Width="300" HorizontalAlignment="Left" Margin="10" Text="Answer 3" FontSize="18" Foreground="Gray"/><RadioButton x:Name="Answer3RadioButton" VerticalAlignment="Center" GroupName="Answers"/></StackPanel>
+                <StackPanel Orientation="Horizontal"><TextBox x:Name="Answer4TextBox" Height="30" Width="300" HorizontalAlignment="Left" Margin="10" Text="Answer 4" FontSize="18" Foreground="Gray"/><RadioButton x:Name="Answer4RadioButton" VerticalAlignment="Center" GroupName="Answers"/></StackPanel>
+                <ComboBox x:Name="Difficulties" Width="250" Height="40"></ComboBox>
+                <Button x:Name="SerializationButton" Grid.Column="1" Height="70" Width="200" VerticalAlignment="Bottom" Margin="0 20 0 0" Content="add"
+                        FontSize="30" Click="SerializationButton_OnClick"/>
+            </StackPanel>
+
+
+        </Grid>
+    </Grid>
+</Window>

@@ -17,3 +17,5 @@ C:\Users\CSharpSila\source\repos\MMTSD\WpfAppMMTSD\obj\Debug\View\ResultWindow.b
 C:\Users\CSharpSila\source\repos\MMTSD\WpfAppMMTSD\obj\Debug\View\StartingWindow.g.cs
 C:\Users\CSharpSila\source\repos\MMTSD\WpfAppMMTSD\obj\Debug\View\StartingWindow.baml
 C:\Users\CSharpSila\source\repos\MMTSD\WpfAppMMTSD\obj\Debug\GeneratedInternalTypeHelper.g.cs
+C:\Users\CSharpSila\source\repos\MMTSD\WpfAppMMTSD\obj\Debug\View\AdminPanelWindow.g.cs
+C:\Users\CSharpSila\source\repos\MMTSD\WpfAppMMTSD\obj\Debug\View\AdminPanelWindow.baml

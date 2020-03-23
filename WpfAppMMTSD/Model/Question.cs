@@ -8,12 +8,14 @@ using System.Threading.Tasks;
 
 namespace WpfAppMMTSD.Model
 {
+    [Serializable]
     public enum QuestionCategory
     {
         Easy, 
         Basic,
         Complicated
     }
+    [Serializable]
     public sealed class Question : INotifyPropertyChanged
     {
         private QuestionCategory _category;
@@ -56,6 +58,8 @@ namespace WpfAppMMTSD.Model
             this.QuestionText = QuestionText;
         }
 
+        public Question()
+        { }
         public override string ToString()
         {
             return this.QuestionText;

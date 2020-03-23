@@ -1,0 +1,223 @@
+<?xml version="1.0"?>
+<ArrayOfQuestion xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Question>
+    <Category>Basic</Category>
+    <Answers>
+      <Answer>
+        <Text>public</Text>
+        <IsRight>false</IsRight>
+      </Answer>
+      <Answer>
+        <Text>internal</Text>
+        <IsRight>true</IsRight>
+      </Answer>
+      <Answer>
+        <Text>private</Text>
+        <IsRight>false</IsRight>
+      </Answer>
+      <Answer>
+        <Text>protected internal</Text>
+        <IsRight>false</IsRight>
+      </Answer>
+    </Answers>
+    <QuestionText>Which access level do classes have if the modifier is not specified</QuestionText>
+  </Question>
+  <Question>
+    <Category>Basic</Category>
+    <Answers>
+      <Answer>
+        <Text>IComparable</Text>
+        <IsRight>false</IsRight>
+      </Answer>
+      <Answer>
+        <Text>IEnumerable</Text>
+        <IsRight>true</IsRight>
+      </Answer>
+      <Answer>
+        <Text>IDisposable</Text>
+        <IsRight>false</IsRight>
+      </Answer>
+      <Answer>
+        <Text>а?</Text>
+        <IsRight>false</IsRight>
+      </Answer>
+    </Answers>
+    <QuestionText>Which interface is used to iterate elements in foreach loop?</QuestionText>
+  </Question>
+  <Question>
+    <Category>Basic</Category>
+    <Answers>
+      <Answer>
+        <Text>Generative pattern</Text>
+        <IsRight>false</IsRight>
+      </Answer>
+      <Answer>
+        <Text>Architecture pattern</Text>
+        <IsRight>true</IsRight>
+      </Answer>
+      <Answer>
+        <Text>Behavior pattern</Text>
+        <IsRight>false</IsRight>
+      </Answer>
+      <Answer>
+        <Text>Structural pattern</Text>
+        <IsRight>false</IsRight>
+      </Answer>
+    </Answers>
+    <QuestionText>What is MVC?</QuestionText>
+  </Question>
+  <Question>
+    <Category>Easy</Category>
+    <Answers>
+      <Answer>
+        <Text>Open()</Text>
+        <IsRight>false</IsRight>
+      </Answer>
+      <Answer>
+        <Text>Main()</Text>
+        <IsRight>true</IsRight>
+      </Answer>
+      <Answer>
+        <Text>Create()</Text>
+        <IsRight>false</IsRight>
+      </Answer>
+      <Answer>
+        <Text>Begin()</Text>
+        <IsRight>false</IsRight>
+      </Answer>
+    </Answers>
+    <QuestionText>From what method does any application start?</QuestionText>
+  </Question>
+  <Question>
+    <Category>Easy</Category>
+    <Answers>
+      <Answer>
+        <Text>int</Text>
+        <IsRight>false</IsRight>
+      </Answer>
+      <Answer>
+        <Text>double</Text>
+        <IsRight>true</IsRight>
+      </Answer>
+      <Answer>
+        <Text>bool</Text>
+        <IsRight>false</IsRight>
+      </Answer>
+      <Answer>
+        <Text>DateTime</Text>
+        <IsRight>false</IsRight>
+      </Answer>
+    </Answers>
+    <QuestionText>Which data type can we use to specify floating numbers?</QuestionText>
+  </Question>
+  <Question>
+    <Category>Easy</Category>
+    <Answers>
+      <Answer>
+        <Text>Struct</Text>
+        <IsRight>false</IsRight>
+      </Answer>
+      <Answer>
+        <Text>Object</Text>
+        <IsRight>true</IsRight>
+      </Answer>
+      <Answer>
+        <Text>Array</Text>
+        <IsRight>false</IsRight>
+      </Answer>
+      <Answer>
+        <Text>Int32</Text>
+        <IsRight>false</IsRight>
+      </Answer>
+    </Answers>
+    <QuestionText>Which type is basic for all types in .NET?</QuestionText>
+  </Question>
+  <Question>
+    <Category>Complicated</Category>
+    <Answers>
+      <Answer>
+        <Text>Text for user</Text>
+        <IsRight>false</IsRight>
+      </Answer>
+      <Answer>
+        <Text>Assembly metadata</Text>
+        <IsRight>true</IsRight>
+      </Answer>
+      <Answer>
+        <Text>Garbage after compilation</Text>
+        <IsRight>false</IsRight>
+      </Answer>
+      <Answer>
+        <Text>Assembly</Text>
+        <IsRight>false</IsRight>
+      </Answer>
+    </Answers>
+    <QuestionText>What is Assembly Manifest?</QuestionText>
+  </Question>
+  <Question>
+    <Category>Complicated</Category>
+    <Answers>
+      <Answer>
+        <Text>General are free and private are paid</Text>
+        <IsRight>false</IsRight>
+      </Answer>
+      <Answer>
+        <Text>Private are in application catalog and general are in GAC</Text>
+        <IsRight>true</IsRight>
+      </Answer>
+      <Answer>
+        <Text>Private don't exist</Text>
+        <IsRight>false</IsRight>
+      </Answer>
+      <Answer>
+        <Text>What?</Text>
+        <IsRight>false</IsRight>
+      </Answer>
+    </Answers>
+    <QuestionText>What is the difference between private and general assemblies?</QuestionText>
+  </Question>
+  <Question>
+    <Category>Complicated</Category>
+    <Answers>
+      <Answer>
+        <Text>Grand Auto Compiler</Text>
+        <IsRight>false</IsRight>
+      </Answer>
+      <Answer>
+        <Text>Global Assembly Cache</Text>
+        <IsRight>true</IsRight>
+      </Answer>
+      <Answer>
+        <Text>Great Automatisation Company</Text>
+        <IsRight>false</IsRight>
+      </Answer>
+      <Answer>
+        <Text>Garbage After Collection</Text>
+        <IsRight>false</IsRight>
+      </Answer>
+    </Answers>
+    <QuestionText>What is GAC</QuestionText>
+  </Question>
+  <Question>
+    <Category>Basic</Category>
+    <Answers>
+      <Answer>
+        <Text>Int64</Text>
+        <IsRight>false</IsRight>
+      </Answer>
+      <Answer>
+        <Text>Int32</Text>
+        <IsRight>true</IsRight>
+      </Answer>
+      <Answer>
+        <Text>Int16</Text>
+        <IsRight>false</IsRight>
+      </Answer>
+      <Answer>
+        <Text>UInt16</Text>
+        <IsRight>false</IsRight>
+      </Answer>
+    </Answers>
+    <QuestionText>What is the right name of int?</QuestionText>
+  </Question>
+</ArrayOfQuestion>

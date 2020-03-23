@@ -8,6 +8,7 @@ using System.Threading.Tasks;
 
 namespace WpfAppMMTSD.Model
 {
+    [Serializable]
     public sealed class Answer : INotifyPropertyChanged
     {
         private string _Text;
@@ -38,6 +39,8 @@ namespace WpfAppMMTSD.Model
             this._IsRight = IsRight;
         }
 
+        public Answer()
+        { }
         public override string ToString()
         {
             return this.Text;

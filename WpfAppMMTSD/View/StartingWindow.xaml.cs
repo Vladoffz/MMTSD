@@ -35,7 +35,8 @@ namespace WpfAppMMTSD.View
 
         private void UIElement_OnMouseDown(object sender, MouseButtonEventArgs e)
         {
-            MessageBox.Show("not ready");
+            AdminPanelWindow window = new AdminPanelWindow();
+            window.Show();
         }
     }
 }
