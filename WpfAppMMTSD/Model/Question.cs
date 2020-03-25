@@ -16,7 +16,7 @@ namespace WpfAppMMTSD.Model
         Complicated
     }
     [Serializable]
-    public sealed class Question : INotifyPropertyChanged
+    public sealed class Question : INotifyPropertyChanged, IQuestion
     {
         private QuestionCategory _category;
         private Answer[] _answers;

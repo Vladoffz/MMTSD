@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 namespace WpfAppMMTSD.Model
 {
     [Serializable]
-    public sealed class Answer : INotifyPropertyChanged
+    public sealed class Answer : INotifyPropertyChanged, IAnswer
     {
         private string _Text;
         private bool _IsRight;

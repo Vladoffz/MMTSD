@@ -8,27 +8,26 @@ using System.Threading.Tasks;
 
 namespace WpfAppMMTSD.Model
 { 
-    public class AllQuestions    //here provided a database work simulation
+    public class AllQuestions : IAllQuestions    //here provided a database work simulation
     {
         private Serialization<List<Question>> serializedList;
-        List<Question> Questions = new List<Question>();
-        string connectionString = ConfigurationManager.ConnectionStrings["DefaultConnection"].ConnectionString;
+        public IEnumerable<IQuestion> Questions { get; set; } = new List<Question>();
+        public string connectionString { get; set; }= ConfigurationManager.ConnectionStrings["DefaultConnection"].ConnectionString;
         public AllQuestions()
         {
-            serializedList = new Serialization<List<Question>>(connectionString, Questions);
+            serializedList = new Serialization<List<Question>>(connectionString, Questions as List<Question>);
         }
-        public List<Question> GetQA()
+        public IEnumerable<IQuestion> GetQA()
         {
             Questions = serializedList.Deserialize();
-
-            return Questions;
+            return Questions as List<Question>;
         }
 
         public void AddQA(Question question)
         {
-            serializedList = new Serialization<List<Question>>(connectionString, Questions);
+            serializedList = new Serialization<List<Question>>(connectionString, Questions as List<Question>);
             File.Delete(connectionString);
-            Questions.Add(question);
+            ((List<Question>)(Questions)).Add(question);
             serializedList.Serialize();
         }
     }

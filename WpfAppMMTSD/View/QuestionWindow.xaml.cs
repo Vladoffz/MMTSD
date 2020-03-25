@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.ComponentModel;
 using System.Data.SqlClient;
 using System.Linq;
@@ -13,6 +14,7 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
+using WpfAppMMTSD.Model;
 using WpfAppMMTSD.ViewModel;
 
 namespace WpfAppMMTSD.View
@@ -36,9 +38,10 @@ namespace WpfAppMMTSD.View
         {
             try
             {
+                var obsColl1 = ((ApplicationViewModel) DataContext).SelectedQuestionsInApplication as List<Question>;
+                var obsColl2 = ((ApplicationViewModel) DataContext).SelectedQuestionsCollection as ObservableCollection<Question>;
                 ((ApplicationViewModel) (DataContext)).CheckAllAnswers(AnswerListBox.SelectedItem.ToString());
-                if (((ApplicationViewModel) (DataContext)).SelectedQuestionsInApplication.Count ==
-                    ((ApplicationViewModel) (DataContext)).SelectedQuestionsCollection.Count)
+                if (obsColl1.Count == obsColl2.Count)
                 {
                     ResultWindow window = new ResultWindow((ApplicationViewModel) this.DataContext);
                     window.Owner = this;

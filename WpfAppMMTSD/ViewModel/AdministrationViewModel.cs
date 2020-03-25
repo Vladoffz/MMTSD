@@ -14,10 +14,10 @@ namespace WpfAppMMTSD.ViewModel
     class AdministrationViewModel
     {
         public List<QuestionCategory> difficulties = new List<QuestionCategory>();
-        AllQuestions allQuestions = new AllQuestions();
-        private ObservableCollection<Question> _listQuestions;
+        IAllQuestions allQuestions = new AllQuestions();
+        private IEnumerable<IQuestion> _listQuestions;
 
-        public ObservableCollection<Question> listQuestions
+        public IEnumerable<IQuestion> listQuestions
         {
             get { return _listQuestions; }
             set
@@ -32,7 +32,7 @@ namespace WpfAppMMTSD.ViewModel
             _listQuestions = new ObservableCollection<Question>();
             foreach (var i in allQuestions.GetQA())
             {
-                _listQuestions.Add(i);
+                ((ObservableCollection<Question>)_listQuestions).Add(i as Question);
             }
             foreach (var i in Enum.GetValues(typeof(QuestionCategory)))
             {

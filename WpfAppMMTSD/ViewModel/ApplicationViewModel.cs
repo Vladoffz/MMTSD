@@ -14,12 +14,12 @@ namespace WpfAppMMTSD.ViewModel
 {
     public class ApplicationViewModel : INotifyPropertyChanged
     {
-        private ObservableCollection<Question> _SelectedQuestionsCollection;
-        private ObservableCollection<Answer> _SelectedAnswersCollection;
-        public List<Question> SelectedQuestionsInApplication;
-        public Dictionary<string, Answer> QuesAnsw;
+        private IEnumerable<IQuestion> _SelectedQuestionsCollection;
+        private IEnumerable<IAnswer> _SelectedAnswersCollection;
+        public IEnumerable<IQuestion> SelectedQuestionsInApplication;
+        public Dictionary<string, IAnswer> QuesAnsw;
 
-        public ObservableCollection<Question> SelectedQuestionsCollection
+        public IEnumerable<IQuestion> SelectedQuestionsCollection
         {
             get { return _SelectedQuestionsCollection; }
             set
@@ -28,7 +28,7 @@ namespace WpfAppMMTSD.ViewModel
                 OnPropertyChanged("SelectedQuestionsCollection");
             }
         }
-        public ObservableCollection<Answer> SelectedAnswersCollection
+        public IEnumerable<IAnswer> SelectedAnswersCollection
         {
             get { return _SelectedAnswersCollection; }
             set
@@ -39,8 +39,8 @@ namespace WpfAppMMTSD.ViewModel
         }
 
 
-        AllQuestions quest = new AllQuestions();
-        public List<Question> Questions { get; set; }
+        IAllQuestions quest = new AllQuestions();
+        public IEnumerable<IQuestion> Questions { get; set; }
         private string _c = "shto";
         public string SelectedQuestionString
         {
@@ -57,12 +57,12 @@ namespace WpfAppMMTSD.ViewModel
             _SelectedQuestionsCollection = new ObservableCollection<Question>();
             _SelectedAnswersCollection = new ObservableCollection<Answer>();
             SelectedQuestionsInApplication = new List<Question>();
-            QuesAnsw = new Dictionary<string, Answer>();
+            QuesAnsw = new Dictionary<string, IAnswer>();
 
             Questions = quest.GetQA(); 
             RandomizeQuestions();
 
-            SelectedQuestionString = _SelectedQuestionsCollection[0].QuestionText;
+            SelectedQuestionString = ((ObservableCollection<Question>)_SelectedQuestionsCollection)[0].QuestionText;
             GetAnswers(SelectedQuestionString);
         }
         
@@ -82,7 +82,7 @@ namespace WpfAppMMTSD.ViewModel
                 {
                     if (cat == que.Category)
                     {
-                        list.Add(que);
+                        list.Add((Question)que);
                     }
                 }
                 questions.Add(list[rnd.Next(list.Count)]);
@@ -102,13 +102,13 @@ namespace WpfAppMMTSD.ViewModel
             }
             foreach (var i in questions)
             {
-                _SelectedQuestionsCollection.Add(i);
+                ((ObservableCollection<Question>)_SelectedQuestionsCollection).Add(i);
             }
         }
 
         public void GetAnswers(string questString)
         {
-            ObservableCollection<Answer> answers = new ObservableCollection<Answer>();
+            IEnumerable<IAnswer> answers = new ObservableCollection<Answer>();
             foreach (var i in _SelectedQuestionsCollection)
             {
                 if (i.QuestionText == questString)
@@ -116,7 +116,7 @@ namespace WpfAppMMTSD.ViewModel
                     SelectedQuestionString = i.QuestionText;
                     foreach(var j in i.Answers)
                     {
-                        answers.Add(j);
+                        ((ObservableCollection<Answer>)answers).Add(j);
                     }
                 }
             }
@@ -136,7 +136,7 @@ namespace WpfAppMMTSD.ViewModel
                         {
                             if (!SelectedQuestionsInApplication.Contains(quest))
                             {
-                                SelectedQuestionsInApplication.Add(quest);
+                                ((List<Question>)SelectedQuestionsInApplication).Add(quest as Question);
                                 QuesAnsw.Add(quest.QuestionText,
                                     _SelectedAnswersCollection.Single(x => x.Text == answerString));
                             }
