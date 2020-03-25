@@ -12,12 +12,12 @@ using WpfAppMMTSD.Model;
 
 namespace WpfAppMMTSD.ViewModel
 {
-    public class ApplicationViewModel : INotifyPropertyChanged
+    public class ApplicationViewModel : INotifyPropertyChanged, IApplicationViewModel
     {
         private IEnumerable<IQuestion> _SelectedQuestionsCollection;
         private IEnumerable<IAnswer> _SelectedAnswersCollection;
-        public IEnumerable<IQuestion> SelectedQuestionsInApplication;
-        public Dictionary<string, IAnswer> QuesAnsw;
+        public IEnumerable<IQuestion> SelectedQuestionsInApplication { get;set; }
+        public Dictionary<string, IAnswer> QuesAnsw { get; set; }
 
         public IEnumerable<IQuestion> SelectedQuestionsCollection
         {
@@ -39,7 +39,7 @@ namespace WpfAppMMTSD.ViewModel
         }
 
 
-        IAllQuestions quest = new AllQuestions();
+        private IAllQuestions quest = new AllQuestions();
         public IEnumerable<IQuestion> Questions { get; set; }
         private string _c = "shto";
         public string SelectedQuestionString

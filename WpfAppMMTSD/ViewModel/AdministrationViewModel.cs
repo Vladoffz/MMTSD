@@ -11,10 +11,10 @@ using WpfAppMMTSD.View;
 
 namespace WpfAppMMTSD.ViewModel
 {
-    class AdministrationViewModel
+    class AdministrationViewModel : IAdministrationViewModel
     {
-        public List<QuestionCategory> difficulties = new List<QuestionCategory>();
-        IAllQuestions allQuestions = new AllQuestions();
+        public List<QuestionCategory> difficulties { get; set; } = new List<QuestionCategory>();
+        private IAllQuestions allQuestions { get; set; } = new AllQuestions();
         private IEnumerable<IQuestion> _listQuestions;
 
         public IEnumerable<IQuestion> listQuestions
@@ -40,9 +40,9 @@ namespace WpfAppMMTSD.ViewModel
             }
         }
 
-        public void AddQuestion(Question question)
+        public void AddQuestion(IQuestion question)
         {
-            allQuestions.AddQA(question);
+            allQuestions.AddQA(question as Question);
         }
 
         public event PropertyChangedEventHandler PropertyChanged;

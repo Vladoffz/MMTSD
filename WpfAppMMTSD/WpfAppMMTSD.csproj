@@ -65,6 +65,8 @@
     <Compile Include="Model\Serialization.cs" />
     <Compile Include="ViewModel\AdministrationViewModel.cs" />
     <Compile Include="ViewModel\ApplicationViewModel.cs" />
+    <Compile Include="ViewModel\IAdministrationViewModel.cs" />
+    <Compile Include="ViewModel\IApplicationViewModel.cs" />
     <Compile Include="View\AdminPanelWindow.xaml.cs">
       <DependentUpon>AdminPanelWindow.xaml</DependentUpon>
     </Compile>
