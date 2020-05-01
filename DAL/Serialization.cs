@@ -8,7 +8,7 @@ using System.Xml.Serialization;
 
 namespace WpfAppMMTSD.Model
 {
-    class Serialization<T>
+    public class Serialization<T>
     {
         public string path { get; set; }
         public T obj { get; set; }

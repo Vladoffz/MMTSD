@@ -6,8 +6,6 @@ namespace WpfAppMMTSD.Model
     {
         IEnumerable<IQuestion> Questions { get; set; }
 
-        string connectionString { get; set; }
-
         IEnumerable<IQuestion> GetQA();
 
         void AddQA(Question question);
