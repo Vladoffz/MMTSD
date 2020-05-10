@@ -60,7 +60,7 @@ namespace WpfAppMMTSD.View
                     ((ApplicationViewModel) (DataContext)).MoveNext();
                 }
             }
-            catch (NullReferenceException ex)
+            catch
             {
                 MessageBox.Show("You haven't chosen the answer!");
             }

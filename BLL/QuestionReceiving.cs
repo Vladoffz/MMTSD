@@ -13,42 +13,22 @@ namespace BLL
 {
     public class QuestionReceiving
     {
-        string connectionString = ConfigurationManager.ConnectionStrings["DefaultConnection"].ConnectionString;
-        Serialization<List<Question>> serializedList;
-        IEnumerable<QuestionDTO> Questions { get; set; } = new List<QuestionDTO>();
-        public QuestionReceiving()
+        QuestionsGetting getting = new QuestionsGetting();
+        public void AddQA(QuestionDTO questionDTO)
         {
-            serializedList = new Serialization<List<Question>>(connectionString, null);
-        }
-        public void AddQA(QuestionDTO question)
-        {
-            ((List<QuestionDTO>)(Questions)).Add(question);
-            List<Question> questions = new Serialization<List<Question>>(connectionString, null).Deserialize();
-            List<Question> pleaseHelpMe = new List<Question>();
-            foreach (var i in questions)
+            Question question;
+            Answer[] answers = new Answer[4];
+            for (int i = 0; i < 4; i++)
             {
-                Answer[] answers = new Answer[4];
-                for (int j = 0; j < 4; j++)
-                {
-                    answers[j] = new Answer(i.Answers[j].Text, i.Answers[j].IsRight);
-                }
-
-                pleaseHelpMe.Add(new Question((DAL.Entities.QuestionCategory) i.Category, answers, i.QuestionText));
+                answers[i] = new Answer(questionDTO.Answers[i].Text, questionDTO.Answers[i].IsRight);
             }
-            Answer[] answersToAddedQuest = new Answer[4];
-            for (int j = 0; j < 4; j++)
-            {
-                answersToAddedQuest[j] = new Answer(question.Answers[j].Text, question.Answers[j].IsRight);
-            }
-            pleaseHelpMe.Add(new Question((DAL.Entities.QuestionCategory)question.Category, answersToAddedQuest, question.QuestionText));
-            serializedList = new Serialization<List<Question>>(connectionString, pleaseHelpMe);
-            File.Delete(connectionString);
-            serializedList.Serialize();
+            question = new Question((DAL.Entities.QuestionCategory)questionDTO.Category, answers, questionDTO.QuestionText);
+            getting.AddQuestion(question);
         }
 
         public List<QuestionDTO> GetQA()
         {
-            List<Question> quests = serializedList.Deserialize();
+            List<Question> quests = getting.GetQuestions();
             List<QuestionDTO> questsDTO = new List<QuestionDTO>();
             foreach (var i in quests)
             {
@@ -60,8 +40,7 @@ namespace BLL
                 questsDTO.Add(new QuestionDTO((QuestionCategory)i.Category, answersDTO, i.QuestionText));
             }
 
-            Questions = questsDTO;
-            return Questions as List<QuestionDTO>;
+            return questsDTO;
         }
     }
 }
