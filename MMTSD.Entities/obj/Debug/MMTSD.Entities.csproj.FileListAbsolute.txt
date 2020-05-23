@@ -1,0 +1,6 @@
+C:\Users\CSharpSila\source\repos\MMTSD\MMTSD.Entities\bin\Debug\MMTSD.Entities.dll
+C:\Users\CSharpSila\source\repos\MMTSD\MMTSD.Entities\bin\Debug\MMTSD.Entities.pdb
+C:\Users\CSharpSila\source\repos\MMTSD\MMTSD.Entities\obj\Debug\MMTSD.Entities.csprojAssemblyReference.cache
+C:\Users\CSharpSila\source\repos\MMTSD\MMTSD.Entities\obj\Debug\MMTSD.Entities.csproj.CoreCompileInputs.cache
+C:\Users\CSharpSila\source\repos\MMTSD\MMTSD.Entities\obj\Debug\MMTSD.Entities.dll
+C:\Users\CSharpSila\source\repos\MMTSD\MMTSD.Entities\obj\Debug\MMTSD.Entities.pdb

@@ -1,0 +1,17 @@
+C:\Users\CSharpSila\source\repos\MMTSD\MMTSD.BLL.Impl\bin\Debug\MMTSD.BLL.Impl.dll
+C:\Users\CSharpSila\source\repos\MMTSD\MMTSD.BLL.Impl\bin\Debug\MMTSD.BLL.Impl.pdb
+C:\Users\CSharpSila\source\repos\MMTSD\MMTSD.BLL.Impl\bin\Debug\MMTSD.BLL.Abstract.dll
+C:\Users\CSharpSila\source\repos\MMTSD\MMTSD.BLL.Impl\bin\Debug\MMTSD.DAL.Abstract.dll
+C:\Users\CSharpSila\source\repos\MMTSD\MMTSD.BLL.Impl\bin\Debug\MMTSD.DAL.Impl.dll
+C:\Users\CSharpSila\source\repos\MMTSD\MMTSD.BLL.Impl\bin\Debug\MMTSD.Entities.dll
+C:\Users\CSharpSila\source\repos\MMTSD\MMTSD.BLL.Impl\bin\Debug\MMTSD.Models.dll
+C:\Users\CSharpSila\source\repos\MMTSD\MMTSD.BLL.Impl\bin\Debug\MMTSD.BLL.Abstract.pdb
+C:\Users\CSharpSila\source\repos\MMTSD\MMTSD.BLL.Impl\bin\Debug\MMTSD.DAL.Abstract.pdb
+C:\Users\CSharpSila\source\repos\MMTSD\MMTSD.BLL.Impl\bin\Debug\MMTSD.DAL.Impl.pdb
+C:\Users\CSharpSila\source\repos\MMTSD\MMTSD.BLL.Impl\bin\Debug\MMTSD.Entities.pdb
+C:\Users\CSharpSila\source\repos\MMTSD\MMTSD.BLL.Impl\bin\Debug\MMTSD.Models.pdb
+C:\Users\CSharpSila\source\repos\MMTSD\MMTSD.BLL.Impl\obj\Debug\MMTSD.BLL.Impl.csprojAssemblyReference.cache
+C:\Users\CSharpSila\source\repos\MMTSD\MMTSD.BLL.Impl\obj\Debug\MMTSD.BLL.Impl.csproj.CoreCompileInputs.cache
+C:\Users\CSharpSila\source\repos\MMTSD\MMTSD.BLL.Impl\obj\Debug\MMTSD.BLL.Impl.csproj.CopyComplete
+C:\Users\CSharpSila\source\repos\MMTSD\MMTSD.BLL.Impl\obj\Debug\MMTSD.BLL.Impl.dll
+C:\Users\CSharpSila\source\repos\MMTSD\MMTSD.BLL.Impl\obj\Debug\MMTSD.BLL.Impl.pdb

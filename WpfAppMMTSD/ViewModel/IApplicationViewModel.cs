@@ -2,21 +2,24 @@
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Linq;
-using WpfAppMMTSD.Model;
+using MMTSD.Entities;
+using MMTSD.BLL.Abstract;
+using MMTSD.BLL.Impl;
+using MMTSD.Models;
 
 namespace WpfAppMMTSD.ViewModel
 {
     public interface IApplicationViewModel
     {
-        IEnumerable<IQuestion> SelectedQuestionsInApplication { get; set;}
+        IEnumerable<QuestionDTO> SelectedQuestionsInApplication { get; set;}
 
-        Dictionary<string, IAnswer> QuesAnsw { get; set;}
+        Dictionary<string, AnswerDTO> QuesAnsw { get; set;}
 
-        IEnumerable<IQuestion> SelectedQuestionsCollection { get; set; }
+        IEnumerable<QuestionDTO> SelectedQuestionsCollection { get; set; }
 
-        IEnumerable<IAnswer> SelectedAnswersCollection { get; set; }
+        IEnumerable<AnswerDTO> SelectedAnswersCollection { get; set; }
 
-        IEnumerable<IQuestion> Questions { get; set; }
+        IEnumerable<QuestionDTO> Questions { get; set; }
 
         string SelectedQuestionString { get; set; }
 

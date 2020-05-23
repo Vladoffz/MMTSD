@@ -6,7 +6,10 @@ using System.Linq;
 using System.Runtime.CompilerServices;
 using System.Text;
 using System.Threading.Tasks;
-using WpfAppMMTSD.Model;
+using MMTSD.Entities;
+using MMTSD.BLL.Abstract;
+using MMTSD.BLL.Impl;
+using MMTSD.Models;
 using WpfAppMMTSD.View;
 
 namespace WpfAppMMTSD.ViewModel
@@ -14,10 +17,10 @@ namespace WpfAppMMTSD.ViewModel
     class AdministrationViewModel : IAdministrationViewModel
     {
         public List<QuestionCategory> difficulties { get; set; } = new List<QuestionCategory>();
-        private IAllQuestions allQuestions { get; set; } = new AllQuestions();
-        private IEnumerable<IQuestion> _listQuestions;
+        private QuestionService service = new QuestionService();
+        private IEnumerable<QuestionDTO> _listQuestions;
 
-        public IEnumerable<IQuestion> listQuestions
+        public IEnumerable<QuestionDTO> listQuestions
         {
             get { return _listQuestions; }
             set
@@ -29,10 +32,10 @@ namespace WpfAppMMTSD.ViewModel
 
         public AdministrationViewModel()
         {
-            _listQuestions = new ObservableCollection<Question>();
-            foreach (var i in allQuestions.GetQA())
+            _listQuestions = new ObservableCollection<QuestionDTO>();
+            foreach (var i in service.GetAll())
             {
-                ((ObservableCollection<Question>)_listQuestions).Add(i as Question);
+                ((ObservableCollection<QuestionDTO>)_listQuestions).Add(i as QuestionDTO);
             }
             foreach (var i in Enum.GetValues(typeof(QuestionCategory)))
             {
@@ -40,9 +43,9 @@ namespace WpfAppMMTSD.ViewModel
             }
         }
 
-        public void AddQuestion(IQuestion question)
+        public void AddQuestion(QuestionDTO question)
         {
-            allQuestions.AddQA(question as Question);
+            service.Create(question as QuestionDTO);
         }
 
         public event PropertyChangedEventHandler PropertyChanged;

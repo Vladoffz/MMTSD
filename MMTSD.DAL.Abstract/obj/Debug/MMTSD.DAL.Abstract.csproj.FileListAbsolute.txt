@@ -1,0 +1,9 @@
+C:\Users\CSharpSila\source\repos\MMTSD\MMTSD.DAL.Abstract\bin\Debug\MMTSD.DAL.Abstract.dll
+C:\Users\CSharpSila\source\repos\MMTSD\MMTSD.DAL.Abstract\bin\Debug\MMTSD.DAL.Abstract.pdb
+C:\Users\CSharpSila\source\repos\MMTSD\MMTSD.DAL.Abstract\bin\Debug\MMTSD.Entities.dll
+C:\Users\CSharpSila\source\repos\MMTSD\MMTSD.DAL.Abstract\bin\Debug\MMTSD.Entities.pdb
+C:\Users\CSharpSila\source\repos\MMTSD\MMTSD.DAL.Abstract\obj\Debug\MMTSD.DAL.Abstract.csprojAssemblyReference.cache
+C:\Users\CSharpSila\source\repos\MMTSD\MMTSD.DAL.Abstract\obj\Debug\MMTSD.DAL.Abstract.csproj.CoreCompileInputs.cache
+C:\Users\CSharpSila\source\repos\MMTSD\MMTSD.DAL.Abstract\obj\Debug\MMTSD.DAL.Abstract.csproj.CopyComplete
+C:\Users\CSharpSila\source\repos\MMTSD\MMTSD.DAL.Abstract\obj\Debug\MMTSD.DAL.Abstract.dll
+C:\Users\CSharpSila\source\repos\MMTSD\MMTSD.DAL.Abstract\obj\Debug\MMTSD.DAL.Abstract.pdb

@@ -14,7 +14,10 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
-using WpfAppMMTSD.Model;
+using MMTSD.Entities;
+using MMTSD.BLL.Abstract;
+using MMTSD.BLL.Impl;
+using MMTSD.Models;
 using WpfAppMMTSD.ViewModel;
 
 namespace WpfAppMMTSD.View
@@ -38,8 +41,8 @@ namespace WpfAppMMTSD.View
         {
             try
             {
-                var obsColl1 = ((ApplicationViewModel) DataContext).SelectedQuestionsInApplication as List<Question>;
-                var obsColl2 = ((ApplicationViewModel) DataContext).SelectedQuestionsCollection as ObservableCollection<Question>;
+                var obsColl1 = ((ApplicationViewModel) DataContext).SelectedQuestionsInApplication as List<QuestionDTO>;
+                var obsColl2 = ((ApplicationViewModel) DataContext).SelectedQuestionsCollection as ObservableCollection<QuestionDTO>;
                 ((ApplicationViewModel) (DataContext)).CheckAllAnswers(AnswerListBox.SelectedItem.ToString());
                 if (obsColl1.Count == obsColl2.Count)
                 {

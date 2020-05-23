@@ -1,7 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
-using WpfAppMMTSD.Model;
+using MMTSD.Entities;
+using MMTSD.BLL.Abstract;
+using MMTSD.BLL.Impl;
+using MMTSD.Models;
 
 namespace WpfAppMMTSD.ViewModel
 {
@@ -9,9 +12,9 @@ namespace WpfAppMMTSD.ViewModel
     {
         List<QuestionCategory> difficulties { get; set; }
 
-        IEnumerable<IQuestion> listQuestions { get; set; }
+        IEnumerable<QuestionDTO> listQuestions { get; set; }
 
-        void AddQuestion(IQuestion question);
+        void AddQuestion(QuestionDTO question);
 
     }
 }

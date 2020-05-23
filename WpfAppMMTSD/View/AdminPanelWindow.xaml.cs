@@ -13,7 +13,10 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
-using WpfAppMMTSD.Model;
+using MMTSD.Entities;
+using MMTSD.BLL.Abstract;
+using MMTSD.BLL.Impl;
+using MMTSD.Models;
 using WpfAppMMTSD.ViewModel;
 
 namespace WpfAppMMTSD.View
@@ -36,15 +39,15 @@ namespace WpfAppMMTSD.View
         private void SerializationButton_OnClick(object sender, RoutedEventArgs e)
         {
             QuestionCategory category = (QuestionCategory)Difficulties.SelectedItem;
-            Answer[] answers = new Answer[]
+            AnswerDTO[] answers = new AnswerDTO[]
             {
-                new Answer(Answer1TextBox.Text, (bool)Answer1RadioButton.IsChecked),
-                new Answer(Answer2TextBox.Text, (bool)Answer2RadioButton.IsChecked),
-                new Answer(Answer3TextBox.Text, (bool)Answer3RadioButton.IsChecked),
-                new Answer(Answer4TextBox.Text, (bool)Answer4RadioButton.IsChecked)
+                new AnswerDTO{ Text = Answer1TextBox.Text, IsRight = (bool)Answer1RadioButton.IsChecked},
+                new AnswerDTO{ Text = Answer2TextBox.Text, IsRight= (bool)Answer2RadioButton.IsChecked},
+                new AnswerDTO{ Text = Answer3TextBox.Text, IsRight= (bool)Answer3RadioButton.IsChecked},
+                new AnswerDTO{ Text = Answer4TextBox.Text, IsRight= (bool)Answer4RadioButton.IsChecked }
             };
 
-            Question question = new Question(category, answers, QuestionTextBox.Text);
+            QuestionDTO question = new QuestionDTO{Category = category, Answers = answers, QuestionText = QuestionTextBox.Text};
             ((AdministrationViewModel) (DataContext)).AddQuestion(question);
         }
     }

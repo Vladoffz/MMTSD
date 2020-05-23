@@ -56,12 +56,6 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
-    <Compile Include="Model\Answer.cs" />
-    <Compile Include="Model\AllQuestions.cs" />
-    <Compile Include="Model\IAllQuestions.cs" />
-    <Compile Include="Model\IAnswer.cs" />
-    <Compile Include="Model\IQuestion.cs" />
-    <Compile Include="Model\Question.cs" />
     <Compile Include="ViewModel\AdministrationViewModel.cs" />
     <Compile Include="ViewModel\ApplicationViewModel.cs" />
     <Compile Include="ViewModel\IAdministrationViewModel.cs" />
@@ -126,9 +120,21 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\BLL\BLL.csproj">
-      <Project>{c8110873-3770-44b4-9bc0-24d6c9cde94c}</Project>
-      <Name>BLL</Name>
+    <ProjectReference Include="..\MMTSD.BLL.Abstract\MMTSD.BLL.Abstract.csproj">
+      <Project>{f2720bd0-17f2-4fbb-aa9a-373073355b1e}</Project>
+      <Name>MMTSD.BLL.Abstract</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\MMTSD.BLL.Impl\MMTSD.BLL.Impl.csproj">
+      <Project>{f6d75634-7f05-4132-a166-9ca88f71c0f6}</Project>
+      <Name>MMTSD.BLL.Impl</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\MMTSD.Entities\MMTSD.Entities.csproj">
+      <Project>{86a39e52-3c7d-4583-8f67-8f7fce57db46}</Project>
+      <Name>MMTSD.Entities</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\MMTSD.Models\MMTSD.Models.csproj">
+      <Project>{51749050-3ae3-4bf0-9668-2cb6cad84640}</Project>
+      <Name>MMTSD.Models</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

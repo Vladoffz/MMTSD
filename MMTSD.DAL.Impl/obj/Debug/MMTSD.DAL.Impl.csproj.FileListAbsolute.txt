@@ -1,0 +1,11 @@
+C:\Users\CSharpSila\source\repos\MMTSD\MMTSD.DAL.Impl\bin\Debug\MMTSD.DAL.Impl.dll
+C:\Users\CSharpSila\source\repos\MMTSD\MMTSD.DAL.Impl\bin\Debug\MMTSD.DAL.Impl.pdb
+C:\Users\CSharpSila\source\repos\MMTSD\MMTSD.DAL.Impl\bin\Debug\MMTSD.DAL.Abstract.dll
+C:\Users\CSharpSila\source\repos\MMTSD\MMTSD.DAL.Impl\bin\Debug\MMTSD.Entities.dll
+C:\Users\CSharpSila\source\repos\MMTSD\MMTSD.DAL.Impl\bin\Debug\MMTSD.DAL.Abstract.pdb
+C:\Users\CSharpSila\source\repos\MMTSD\MMTSD.DAL.Impl\bin\Debug\MMTSD.Entities.pdb
+C:\Users\CSharpSila\source\repos\MMTSD\MMTSD.DAL.Impl\obj\Debug\MMTSD.DAL.Impl.csprojAssemblyReference.cache
+C:\Users\CSharpSila\source\repos\MMTSD\MMTSD.DAL.Impl\obj\Debug\MMTSD.DAL.Impl.csproj.CoreCompileInputs.cache
+C:\Users\CSharpSila\source\repos\MMTSD\MMTSD.DAL.Impl\obj\Debug\MMTSD.DAL.Impl.csproj.CopyComplete
+C:\Users\CSharpSila\source\repos\MMTSD\MMTSD.DAL.Impl\obj\Debug\MMTSD.DAL.Impl.dll
+C:\Users\CSharpSila\source\repos\MMTSD\MMTSD.DAL.Impl\obj\Debug\MMTSD.DAL.Impl.pdb
