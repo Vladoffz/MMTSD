@@ -11,6 +11,7 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
+using MMTSD.Entities;
 
 namespace WpfAppMMTSD.View
 {
@@ -21,6 +22,8 @@ namespace WpfAppMMTSD.View
     {
         public StartingWindow()
         {
+            //DbInitializer initializer = new DbInitializer();
+            //initializer.Initialize();
             InitializeComponent();
         }
         private void ButtonBase_OnClick(object sender, RoutedEventArgs e)

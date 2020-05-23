@@ -1,6 +1,7 @@
 ﻿using MMTSD.BLL.Abstract;
 using MMTSD.Models;
 using System.Collections.Generic;
+using System.Linq;
 using MMTSD.DAL.Abstract;
 using MMTSD.DAL.Impl;
 using MMTSD.Entities;
@@ -25,7 +26,7 @@ namespace MMTSD.BLL.Impl
         public IEnumerable<AnswerDTO> GetAll()
         {
             List<AnswerDTO> list = new List<AnswerDTO>();
-            foreach (var i in unitOfWork.Answers.GetAll())
+            foreach (var i in unitOfWork.Answers.GetAll().ToList())
             {
                 list.Add(mapper.AnswerToAnswerDTO(i));
             }

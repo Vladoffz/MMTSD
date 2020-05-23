@@ -1,17 +1,18 @@
 ﻿using System.Collections.Generic;
+using System.Data.Entity;
 
 namespace MMTSD.Entities
 {
-    public class QAContext
+    public class QAContext:DbContext
     {
-        public List<Question> Questions { get; set; }
-        public List<Answer> Answers { get; set; }
+        public DbSet<Question> Questions { get; set; }
+        public DbSet<Answer> Answers { get; set; }
 
-        public QAContext()
+        public QAContext():base("DbConnection")
         {
-            Serialization<List<Question>> serializationQuestions = new Serialization<List<Question>>(@"serializedList.xml", null);
-            Questions = serializationQuestions.Deserialize();
-            Serialization<Answer> serializationAnswers = new Serialization<Answer>(@"serializedList.xml", null);
+            //Serialization<List<Question>> serializationQuestions = new Serialization<List<Question>>(@"serializedList.xml", null);
+            //Questions = serializationQuestions.Deserialize();
+            //Serialization<Answer> serializationAnswers = new Serialization<Answer>(@"serializedList.xml", null);
         }
     }
 }

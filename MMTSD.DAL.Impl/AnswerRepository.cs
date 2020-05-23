@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using System.Linq;
 using MMTSD.DAL.Abstract;
 using MMTSD.Entities;
 
@@ -19,12 +20,12 @@ namespace MMTSD.DAL.Impl
 
         public void Delete(int id)
         {
-            context.Answers.Remove(context.Answers.Find(x => x.id == id));
+            context.Answers.Remove(context.Answers.ToList().Find(x => x.id == id));
         }
 
         public IEnumerable<Answer> GetAll()
         {
-            return context.Answers;
+            return context.Answers.ToList();
         }
 
         public Answer Read()

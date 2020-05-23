@@ -15,3 +15,7 @@ C:\Users\CSharpSila\source\repos\MMTSD\MMTSD.BLL.Impl\obj\Debug\MMTSD.BLL.Impl.c
 C:\Users\CSharpSila\source\repos\MMTSD\MMTSD.BLL.Impl\obj\Debug\MMTSD.BLL.Impl.csproj.CopyComplete
 C:\Users\CSharpSila\source\repos\MMTSD\MMTSD.BLL.Impl\obj\Debug\MMTSD.BLL.Impl.dll
 C:\Users\CSharpSila\source\repos\MMTSD\MMTSD.BLL.Impl\obj\Debug\MMTSD.BLL.Impl.pdb
+C:\Users\CSharpSila\source\repos\MMTSD\MMTSD.BLL.Impl\bin\Debug\EntityFramework.dll
+C:\Users\CSharpSila\source\repos\MMTSD\MMTSD.BLL.Impl\bin\Debug\MMTSD.Entities.dll.config
+C:\Users\CSharpSila\source\repos\MMTSD\MMTSD.BLL.Impl\bin\Debug\EntityFramework.xml
+C:\Users\CSharpSila\source\repos\MMTSD\MMTSD.BLL.Impl\bin\Debug\MMTSD.DAL.Impl.dll.config

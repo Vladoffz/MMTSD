@@ -1,6 +1,8 @@
 ﻿using MMTSD.Entities;
 using MMTSD.DAL.Abstract;
 using System.Collections.Generic;
+using System.Linq;
+using System.Data.Entity;
 
 namespace MMTSD.DAL.Impl
 {
@@ -19,12 +21,24 @@ namespace MMTSD.DAL.Impl
 
         public void Delete(int id)
         {
-            context.Questions.Remove(context.Questions.Find(x => x.id == id));
+            context.Questions.Remove(context.Questions.ToList().Find(x=>x.id==id));
         }
 
         public IEnumerable<Question> GetAll()
         {
-            return context.Questions;
+            List<Answer> answers = context.Answers.ToList();
+            List<Question> deserialized = new List<Question>(context.Questions.ToList());
+            for (int i = 0; i < deserialized.Count; i++)
+            {
+                deserialized[i].Answers = new Answer[4];
+                for (int j = 0, k = i*4; j < 4; j++, k++)
+                {
+                    deserialized[i].Answers[j] = answers[k];
+                }
+            }
+
+            return deserialized;
+            //return context.Questions.Include(x=>x.Answers == context.Answers.ToArray()).ToList();
         }
 
         public Question Read()

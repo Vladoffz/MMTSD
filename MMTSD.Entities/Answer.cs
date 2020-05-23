@@ -5,5 +5,6 @@
         public int id { get; set; }
         public string Text { get; set; }
         public bool IsRight { get; set; }
+        public Question Question { get; set; }
     }
 }

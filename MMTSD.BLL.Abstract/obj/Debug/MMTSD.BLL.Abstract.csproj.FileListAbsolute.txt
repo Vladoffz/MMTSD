@@ -9,3 +9,6 @@ C:\Users\CSharpSila\source\repos\MMTSD\MMTSD.BLL.Abstract\obj\Debug\MMTSD.BLL.Ab
 C:\Users\CSharpSila\source\repos\MMTSD\MMTSD.BLL.Abstract\obj\Debug\MMTSD.BLL.Abstract.csproj.CopyComplete
 C:\Users\CSharpSila\source\repos\MMTSD\MMTSD.BLL.Abstract\obj\Debug\MMTSD.BLL.Abstract.dll
 C:\Users\CSharpSila\source\repos\MMTSD\MMTSD.BLL.Abstract\obj\Debug\MMTSD.BLL.Abstract.pdb
+C:\Users\CSharpSila\source\repos\MMTSD\MMTSD.BLL.Abstract\bin\Debug\EntityFramework.dll
+C:\Users\CSharpSila\source\repos\MMTSD\MMTSD.BLL.Abstract\bin\Debug\MMTSD.Entities.dll.config
+C:\Users\CSharpSila\source\repos\MMTSD\MMTSD.BLL.Abstract\bin\Debug\EntityFramework.xml
