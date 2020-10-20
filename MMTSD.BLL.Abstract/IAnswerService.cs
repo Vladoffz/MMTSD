@@ -2,8 +2,8 @@
 
 namespace MMTSD.BLL.Abstract
 {
-    public interface IAnswerService:IGenericService<AnswerDTO>
+    public interface IAnswerService : IGenericService<AnswerDTO>
     {
-        
+
     }
 }

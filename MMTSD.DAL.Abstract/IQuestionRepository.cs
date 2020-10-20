@@ -4,6 +4,6 @@ namespace MMTSD.DAL.Abstract
 {
     public interface IQuestionRepository : IGenericRepository<Question>
     {
-        
+
     }
 }

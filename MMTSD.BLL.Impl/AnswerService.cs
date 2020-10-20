@@ -1,10 +1,8 @@
 ﻿using MMTSD.BLL.Abstract;
+using MMTSD.DAL.Impl;
 using MMTSD.Models;
 using System.Collections.Generic;
 using System.Linq;
-using MMTSD.DAL.Abstract;
-using MMTSD.DAL.Impl;
-using MMTSD.Entities;
 
 namespace MMTSD.BLL.Impl
 {

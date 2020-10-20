@@ -1,7 +1,7 @@
-﻿using System.Collections.Generic;
-using System.Linq;
-using MMTSD.DAL.Abstract;
+﻿using MMTSD.DAL.Abstract;
 using MMTSD.Entities;
+using System.Collections.Generic;
+using System.Linq;
 
 namespace MMTSD.DAL.Impl
 {

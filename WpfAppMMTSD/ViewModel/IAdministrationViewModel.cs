@@ -1,10 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Collections.ObjectModel;
-using MMTSD.Entities;
-using MMTSD.BLL.Abstract;
-using MMTSD.BLL.Impl;
+﻿using MMTSD.Entities;
 using MMTSD.Models;
+using System.Collections.Generic;
 
 namespace WpfAppMMTSD.ViewModel
 {

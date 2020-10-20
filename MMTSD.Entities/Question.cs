@@ -2,7 +2,7 @@
 {
     public enum QuestionCategory
     {
-        Easy, 
+        Easy,
         Basic,
         Complicated
     }

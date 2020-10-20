@@ -1,16 +1,11 @@
-﻿using System;
+﻿using MMTSD.BLL.Impl;
+using MMTSD.Entities;
+using MMTSD.Models;
+using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.ComponentModel;
-using System.Linq;
 using System.Runtime.CompilerServices;
-using System.Text;
-using System.Threading.Tasks;
-using MMTSD.Entities;
-using MMTSD.BLL.Abstract;
-using MMTSD.BLL.Impl;
-using MMTSD.Models;
-using WpfAppMMTSD.View;
 
 namespace WpfAppMMTSD.ViewModel
 {
@@ -49,7 +44,7 @@ namespace WpfAppMMTSD.ViewModel
         }
 
         public event PropertyChangedEventHandler PropertyChanged;
-        public void OnPropertyChanged([CallerMemberName]string prop = "")
+        public void OnPropertyChanged([CallerMemberName] string prop = "")
         {
             if (PropertyChanged != null)
                 PropertyChanged(this, new PropertyChangedEventArgs(prop));

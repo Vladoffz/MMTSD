@@ -1,10 +1,8 @@
-﻿using System;
-using MMTSD.BLL.Abstract;
+﻿using MMTSD.BLL.Abstract;
+using MMTSD.DAL.Impl;
 using MMTSD.Models;
 using System.Collections.Generic;
 using System.Linq;
-using MMTSD.DAL.Abstract;
-using MMTSD.DAL.Impl;
 
 namespace MMTSD.BLL.Impl
 {
@@ -12,7 +10,7 @@ namespace MMTSD.BLL.Impl
     {
         QuestionMapper mapper = new QuestionMapper();
         UnitOfWork unitOfWork = new UnitOfWork();
- 
+
         public void Create(QuestionDTO obj)
         {
             unitOfWork.Questions.Create(mapper.QuestionDTOToQuestion(obj));
