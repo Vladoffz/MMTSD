@@ -1,22 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Collections.Specialized;
-using System.ComponentModel;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows;
-using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Shapes;
-using MMTSD.Entities;
-using MMTSD.BLL.Abstract;
-using MMTSD.BLL.Impl;
+﻿using MMTSD.Entities;
 using MMTSD.Models;
+using System.Windows;
 using WpfAppMMTSD.ViewModel;
 
 namespace WpfAppMMTSD.View
@@ -30,7 +14,7 @@ namespace WpfAppMMTSD.View
         {
             InitializeComponent();
             DataContext = new AdministrationViewModel();
-            foreach (var i in ((AdministrationViewModel) (DataContext)).difficulties)
+            foreach (var i in ((AdministrationViewModel)(DataContext)).difficulties)
             {
                 Difficulties.Items.Add(i);
             }
@@ -47,8 +31,8 @@ namespace WpfAppMMTSD.View
                 new AnswerDTO{ Text = Answer4TextBox.Text, IsRight= (bool)Answer4RadioButton.IsChecked }
             };
 
-            QuestionDTO question = new QuestionDTO{Category = category, Answers = answers, QuestionText = QuestionTextBox.Text};
-            ((AdministrationViewModel) (DataContext)).AddQuestion(question);
+            QuestionDTO question = new QuestionDTO { Category = category, Answers = answers, QuestionText = QuestionTextBox.Text };
+            ((AdministrationViewModel)(DataContext)).AddQuestion(question);
         }
     }
 }

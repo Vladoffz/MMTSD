@@ -1,17 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.ComponentModel;
 using System.Windows;
-using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Shapes;
 using WpfAppMMTSD.ViewModel;
 
 namespace WpfAppMMTSD.View
@@ -27,7 +15,7 @@ namespace WpfAppMMTSD.View
             InitializeComponent();
         }
 
-        public ResultWindow(ApplicationViewModel vm):this()
+        public ResultWindow(ApplicationViewModel vm) : this()
         {
             this.vm = vm;
             int result = 0;

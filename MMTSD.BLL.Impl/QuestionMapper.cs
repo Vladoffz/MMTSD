@@ -1,7 +1,7 @@
-﻿using System.Linq;
-using MMTSD.DAL.Impl;
+﻿using MMTSD.DAL.Impl;
 using MMTSD.Entities;
 using MMTSD.Models;
+using System.Linq;
 
 namespace MMTSD.BLL.Impl
 {

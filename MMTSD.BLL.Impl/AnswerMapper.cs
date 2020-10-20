@@ -1,7 +1,7 @@
-﻿using System.Linq;
-using MMTSD.DAL.Impl;
+﻿using MMTSD.DAL.Impl;
 using MMTSD.Entities;
 using MMTSD.Models;
+using System.Linq;
 
 namespace MMTSD.BLL.Impl
 {
@@ -10,7 +10,7 @@ namespace MMTSD.BLL.Impl
         private UnitOfWork unitOfWork = new UnitOfWork();
         public AnswerDTO AnswerToAnswerDTO(Answer answer)
         {
-            return new AnswerDTO{id=answer.id, IsRight = answer.IsRight, Text = answer.Text};
+            return new AnswerDTO { id = answer.id, IsRight = answer.IsRight, Text = answer.Text };
         }
 
         public Answer AnswerDTOToAnswer(AnswerDTO answerDTO)

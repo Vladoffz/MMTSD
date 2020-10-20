@@ -2,8 +2,8 @@
 
 namespace MMTSD.BLL.Abstract
 {
-    public interface IQuestionService:IGenericService<QuestionDTO>
+    public interface IQuestionService : IGenericService<QuestionDTO>
     {
-        
+
     }
 }

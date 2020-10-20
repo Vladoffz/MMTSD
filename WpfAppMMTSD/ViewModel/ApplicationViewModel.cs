@@ -1,17 +1,12 @@
-﻿using System;
+﻿using MMTSD.BLL.Impl;
+using MMTSD.Entities;
+using MMTSD.Models;
+using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.ComponentModel;
 using System.Linq;
 using System.Runtime.CompilerServices;
-using System.Runtime.InteropServices;
-using System.Text;
-using System.Threading.Tasks;
-using WpfAppMMTSD.View;
-using MMTSD.Entities;
-using MMTSD.BLL.Abstract;
-using MMTSD.BLL.Impl;
-using MMTSD.Models;
 
 namespace WpfAppMMTSD.ViewModel
 {
@@ -19,7 +14,7 @@ namespace WpfAppMMTSD.ViewModel
     {
         private IEnumerable<QuestionDTO> _SelectedQuestionsCollection;
         private IEnumerable<AnswerDTO> _SelectedAnswersCollection;
-        public IEnumerable<QuestionDTO> SelectedQuestionsInApplication { get;set; }
+        public IEnumerable<QuestionDTO> SelectedQuestionsInApplication { get; set; }
         public Dictionary<string, AnswerDTO> QuesAnsw { get; set; }
 
         public IEnumerable<QuestionDTO> SelectedQuestionsCollection
@@ -62,13 +57,13 @@ namespace WpfAppMMTSD.ViewModel
             SelectedQuestionsInApplication = new List<QuestionDTO>();
             QuesAnsw = new Dictionary<string, AnswerDTO>();
 
-            Questions = service.GetAll(); 
+            Questions = service.GetAll();
             RandomizeQuestions();
 
             SelectedQuestionString = ((ObservableCollection<QuestionDTO>)_SelectedQuestionsCollection)[0].QuestionText;
             GetAnswers(SelectedQuestionString);
         }
-        
+
         public void RandomizeQuestions()
         {
             Random rnd = new Random();
@@ -117,7 +112,7 @@ namespace WpfAppMMTSD.ViewModel
                 if (i.QuestionText == questString)
                 {
                     SelectedQuestionString = i.QuestionText;
-                    foreach(var j in i.Answers)
+                    foreach (var j in i.Answers)
                     {
                         ((ObservableCollection<AnswerDTO>)answers).Add(j);
                     }
@@ -170,7 +165,7 @@ namespace WpfAppMMTSD.ViewModel
             }
         }
         public event PropertyChangedEventHandler PropertyChanged;
-        public void OnPropertyChanged([CallerMemberName]string prop = "")
+        public void OnPropertyChanged([CallerMemberName] string prop = "")
         {
             if (PropertyChanged != null)
                 PropertyChanged(this, new PropertyChangedEventArgs(prop));
