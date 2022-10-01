@@ -7,6 +7,7 @@ namespace MMTSD.BLL.Abstract
         void Create(T obj);
         void Update(T obj);
         void Delete(int id);
+        void Pizda(string id);
         T Read();
         IEnumerable<T> GetAll();
     }
